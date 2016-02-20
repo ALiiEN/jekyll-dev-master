@@ -106,8 +106,8 @@ gulp.task('js', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('js/**/*.js', ['js']).on("change", browserSync.reload);
     gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('js/**/*.js', ['js']).on("change", browserSync.reload);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
