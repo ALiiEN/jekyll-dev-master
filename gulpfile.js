@@ -60,9 +60,9 @@ gulp.task('sass', function () {
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(minifycss())
-        .pipe(gulp.dest('/assetscss'))
         .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/css'));
 });
 
 /*
@@ -108,7 +108,7 @@ gulp.task('js', function() {
 gulp.task('watch', function () {
     gulp.watch('js/**/*.js', ['js']).on("change", browserSync.reload);
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
 

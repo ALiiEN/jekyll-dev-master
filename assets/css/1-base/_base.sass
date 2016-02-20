@@ -55,12 +55,12 @@ hr
 /* Links
   ------------------------------------	*/
 a
-  color: $accent
+  color: $accent-color
   text-decoration: none
   outline: 0
 
 a:hover, a:focus
-  color: lighten($accent, 20%)
+  color: lighten($accent-color, 20%)
 
 
 
@@ -68,10 +68,10 @@ a:hover, a:focus
   ------------------------------------	*/
 
 ::selection
-  background: $selectionColor
+  background: $selection-color
 
 ::-moz-selection
-  background: $selectionColor
+  background: $selection-color
 
 img::selection
   background: transparent
@@ -80,18 +80,18 @@ img::-moz-selection
   background: transparent
 
 body
-  -webkit-tap-highlight-color: $selectionColor
+  -webkit-tap-highlight-color: $selection-color
 
 
 
 /* Basic Styles
   ------------------------------------	*/
 body
-  background: $documentBackgroundColor
+  background: $bg-color
   font-size: 14px
   line-height: 1.6
   font-family: 'Open Sans' sans-serif
-  color: $textColor
+  color: $text-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
 
@@ -100,7 +100,7 @@ svg
 
 h3
   @extend %small-bold
-  color: $accent-light
+  color: $accent-color
   text-align: center
   padding: 100px 0 30px
 
@@ -114,8 +114,8 @@ fieldset
     padding: 50px 0 50px
 
 section:nth-child(odd)
-  background: $bgcolor
+  background: $bg-color
   padding-bottom: 100px
 
   h3
-    color: darken($accent-light, 10%)
+    color: darken($accent-color, 10%)
