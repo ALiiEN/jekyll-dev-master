@@ -107,7 +107,7 @@ gulp.task('js', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('js/**/*.js', ['js']).on("change", browserSync.reload);
-    gulp.watch('css/**', ['sass']);
+    gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
